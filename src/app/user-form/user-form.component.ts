@@ -11,7 +11,4 @@ export class UserFormComponent implements OnInit {
 
   ngOnInit() {
   }
-  showEvent(event) {
-    this.name = event.target.value;
-  }
 }
