@@ -9,4 +9,6 @@ import { Component } from '@angular/core';
 export class WordComponent {
     en = 'Hello';
     vn = 'Xin chao';
+    imageUrl = 'https://angular.io/assets/images/logos/angular/shield-large.svg';
+    forgot = false;
 }
