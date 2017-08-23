@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-    template: '<h3>This is Word component</h3>',
-    selector: 'app-word'
+    templateUrl: './word.component.html',
+    selector: 'app-word',
+    styleUrls: ['./word.component.css']
 })
 
 export class WordComponent {}
