@@ -8,10 +8,18 @@
 <button (click)="isShowForm = true" *ngIf="!isShowForm">
   Thêm từ mới
 </button>
-<div *ngFor="let word of arrWords" class="word">
+<br><br>
+<select [(ngModel)]="filterStatus">
+  <option value="XEM_TAT_CA">Xem tất cả</option>
+  <option value="XEM_DA_NHO">Xem từ đã nhớ</option>
+  <option value="XEM_CHUA_NHO">Xem từ chưa nhớ</option>
+</select>
+<div *ngFor="let word of arrWords">
+  <div class="word" *ngIf="getShowStatus(word.memorized)">
   <h4 [ngStyle]="{ color: word.memorized ? 'green' : 'red' }">
     {{ word.en }}
   </h4>
   <p>{{ word.vn }}</p>
   <button (click)="removeWord(word.id);">xoá</button>
+</div>
 </div>
