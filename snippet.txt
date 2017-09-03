@@ -21,7 +21,8 @@ import { Component } from '@angular/core';
     `,
     styles: [`
         .card {
-            padding-left: 5px;
+            padding: 5px;
+            margin: 5px;
             background: #fff;
             border-radius: 2px;
             display: inline-block;
