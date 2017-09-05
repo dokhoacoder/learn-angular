@@ -8,12 +8,19 @@ import { WeatherService } from './weather.service';
   providers: [WeatherService]
 })
 export class WeatherComponent implements OnInit {
-
+  txtCityName = '';
+  cityName = '';
+  temp = null;
   constructor(private weatherService: WeatherService) { }
 
-  ngOnInit() {
-    this.weatherService.getTemp('Tokyo')
-    .then(temp => console.log(temp))
+  ngOnInit() {}
+
+  getWeather() {
+    this.weatherService.getTemp(this.txtCityName)
+    .then(temp => {
+      this.cityName = this.txtCityName;
+      this.temp = temp;
+    })
     .catch(err => console.log(err));
   }
 }
