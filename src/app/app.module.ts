@@ -18,6 +18,8 @@ import { LearnPipeComponent } from './learn-pipe/learn-pipe.component';
 import { IpComponent } from './ip.component';
 import { RoundPipe } from './round.pipe';
 
+import { IpService } from './ip.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +42,7 @@ import { RoundPipe } from './round.pipe';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [IpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
