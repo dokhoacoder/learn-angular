@@ -3,10 +3,10 @@ import { Component } from '@angular/core';
 @Component({
     selector: 'app-sign-in',
     template: `
-        <form (submit)="onSubmit(formSignIn);" #formSignIn="ngForm">
-            <input placeholder="Email" [(ngModel)]="email" name="email">
+        <form (ngSubmit)="onSubmit(formSignIn);" #formSignIn="ngForm">
+            <input placeholder="Email" ngModel name="email">
             <br><br>
-            <input type="password" placeholder="Password" [(ngModel)]="password" name="password">
+            <input type="password" placeholder="Password" ngModel name="password">
             <br><br>
             <button>Submit</button>
         </form>
@@ -14,9 +14,7 @@ import { Component } from '@angular/core';
 })
 
 export class SignInComponent {
-    email = '';
-    password = '';
     onSubmit(formSignIn) {
-        console.log(formSignIn.value);
+        console.log(formSignIn);
     }
 }
