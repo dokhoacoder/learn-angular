@@ -16,6 +16,8 @@ import { ChildComponent } from './child.component';
 import { CardComponent } from './card.component';
 import { LearnPipeComponent } from './learn-pipe/learn-pipe.component';
 import { IpComponent } from './ip.component';
+import { SignInComponent } from './sign-in.component';
+
 import { RoundPipe } from './round.pipe';
 
 import { IpService } from './ip.service';
@@ -35,6 +37,7 @@ import { WeatherComponent } from './weather/weather.component';
     ChildComponent,
     CardComponent,
     LearnPipeComponent,
+    SignInComponent,
     IpComponent,
     RoundPipe,
     WeatherComponent
