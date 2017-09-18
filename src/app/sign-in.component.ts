@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Http, Headers } from '@angular/http';
 
 @Component({
     selector: 'app-sign-in',
@@ -44,7 +45,17 @@ import { Component } from '@angular/core';
 })
 
 export class SignInComponent {
+    constructor(private http: Http) {
+
+    }
     onSubmit(formSignIn) {
-        console.log(formSignIn);
+        const url = 'http://localhost:3000/x';
+        const headers = new Headers({'Content-Type': 'application/json'});
+        const body = { name: 'Khoa Pham' };
+        return this.http
+          .put(url, JSON.stringify(body), { headers: headers })
+          .toPromise()
+          .then(res => res.json())
+          .then(resJson => console.log(resJson));
     }
 }
