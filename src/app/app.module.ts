@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
@@ -17,6 +17,7 @@ import { CardComponent } from './card.component';
 import { LearnPipeComponent } from './learn-pipe/learn-pipe.component';
 import { IpComponent } from './ip.component';
 import { SignInComponent } from './sign-in.component';
+import { SignUpComponent } from './sign-up.component';
 
 import { RoundPipe } from './round.pipe';
 
@@ -40,12 +41,14 @@ import { WeatherComponent } from './weather/weather.component';
     SignInComponent,
     IpComponent,
     RoundPipe,
-    WeatherComponent
+    WeatherComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    ReactiveFormsModule
   ],
   providers: [IpService],
   bootstrap: [AppComponent]
