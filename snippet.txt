@@ -44,3 +44,11 @@ app.use((req, res, next) => {
     res.header('Access-Control-Allow-Headers', 'Content-Type,X-Requested-With');
     next();
 });
+
+----CONTACTS ----
+
+[
+    { id: 1, name: 'Teo', phoneNumber: '0123' },
+    { id: 2, name: 'Ti', phoneNumber: '0456' },
+    { id: 3, name: 'Tun', phoneNumber: '0789' },
+]
